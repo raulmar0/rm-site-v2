@@ -57,7 +57,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with ng
-        run: ${{ steps.detect-package-manager.outputs.runner }} ng build --configuration production --base-href https://raulmar0.github.io/ng-getting-started/
+        run: ${{ steps.detect-package-manager.outputs.runner }} ng build --configuration production --base-href https://raulmar0.github.io/rm-site-v2/
       - name: Copy file
         run: |
           cp "dist/rm-site-v2/index.html" "dist/rm-site-v2/404.html"
