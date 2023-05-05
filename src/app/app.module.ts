@@ -7,7 +7,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HeaderComponent } from './header/header.component';
 import { BioComponent } from './bio/bio.component';
 import { NavComponent } from './nav/nav.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { ContentComponent } from './content/content.component';
+import { PostComponent } from './content/post/post.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProjectsComponent } from './projects/projects.component';
     HeaderComponent,
     BioComponent,
     NavComponent,
-    ProjectsComponent
+    ContentComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

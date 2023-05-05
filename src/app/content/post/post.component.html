@@ -1,0 +1,25 @@
+<div class="project--grid-container">
+  <div class="project--img">
+    <img
+      [src]="imgSrc"
+      alt=""
+    />
+  </div>
+  <div class="project--name vertical-center">
+    <h4>{{title}}</h4>
+  </div>
+  <div class="project--description vertical-center">
+    <p>{{description}}</p>
+  </div>
+  <div class="project--thumbnail vertical-center">
+    <img
+      [src]="thumbnailSrc"
+      alt=""
+    />
+  </div>
+  <div class="project--buttons vertical-center">
+    <div *ngFor="let button of buttons">
+      <button >{{button}}</button>
+    </div>
+  </div>
+</div>
