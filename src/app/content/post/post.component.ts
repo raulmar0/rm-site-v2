@@ -1,7 +1,11 @@
+import { CommonModule } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'rm-post',
+  standalone: true,
+  imports: [NgFor],
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
