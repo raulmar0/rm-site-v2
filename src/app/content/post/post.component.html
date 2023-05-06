@@ -18,8 +18,10 @@
     />
   </div>
   <div class="project--buttons vertical-center">
-    <div *ngFor="let button of buttons">
-      <button >{{button}}</button>
+    <div *ngFor="let button of buttonsTemplate">
+      <button>
+        <a [href]="button[1]">{{button[0]}}</a>
+      </button>
     </div>
   </div>
 </div>

@@ -76,6 +76,11 @@
   color: #333333;
 }
 
+button > a {
+  text-decoration: none;
+  color: #333333;
+}
+
 @media (min-width: 480px) {
 
   .project--grid-container {

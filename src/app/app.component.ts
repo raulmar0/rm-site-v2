@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BioComponent } from './bio/bio.component';
@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { PostComponent } from './content/post/post.component';
+import { ProjectsService } from './content/projects.service';
 
 @Component({
   selector: 'app-root',
@@ -24,9 +25,7 @@ import { PostComponent } from './content/post/post.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sampleImgSrc = 'https://img.freepik.com/premium-vector/dance-couple-stick-figure-icon-black-ballroom-pictogram-waltz-tango-dancing-man-woman_253081-1330.jpg';
-  sampleTitle = '567 dance!';
-  sampleDescription = 'Is the ultimate app for practicing latin rhythms.';
-  sampleThumbnailSrc = 'https://raulmar.com/assets/projects/567-dance-thumbnail.webp';
-  sampleButtons = ['Demo', 'Source Code'];
+  private projectsService = inject(ProjectsService);
+  serverUrl = 'http://rmperso-vm.southcentralus.cloudapp.azure.com/api/files/a5z5lowx02spot2/'
+  $projects = this.projectsService.$projects;
 }

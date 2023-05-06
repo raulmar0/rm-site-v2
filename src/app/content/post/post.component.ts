@@ -1,6 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { ProjectsService } from '../projects.service';
+import PocketBase from 'pocketbase';
+import { map } from 'rxjs';
+
 
 @Component({
   selector: 'rm-post',
@@ -14,12 +18,11 @@ export class PostComponent {
   @Input() title: string | undefined;
   @Input() description: string | undefined;
   @Input() thumbnailSrc: string | undefined;
-  @Input() buttons: string[] | undefined;
+  @Input() buttons: any | undefined;
 
+  private projectsService = inject(ProjectsService);
+  buttonsTemplate: any | undefined;
   ngOnInit(): void {
-    console.log(this.buttons);
-    this.buttons?.forEach((button) => {
-      console.log(button);
-    });
+    this.buttonsTemplate = Object.entries(this.buttons)
   }
 }
