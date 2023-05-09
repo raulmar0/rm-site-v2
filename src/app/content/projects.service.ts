@@ -8,7 +8,7 @@ import { from, tap } from 'rxjs';
 })
 export class ProjectsService {
 
-  pb = new PocketBase('http://rmperso-vm.southcentralus.cloudapp.azure.com');
+  pb = new PocketBase('https://rmperso-pb.fly.dev');
 
   $projects = from(this.pb.collection('projects').getFullList({
       sort: '-created',
