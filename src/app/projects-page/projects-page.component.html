@@ -1,0 +1,14 @@
+<rm-top-bar/>
+<rm-header/>
+<rm-bio/>
+<rm-nav navLocation="Projects"/>
+<rm-content *ngIf="$projects | async as projects">
+  <rm-post *ngFor="let project of projects "
+    [imgSrc]="serverUrl+project['collectionId']+'/'+project['id']+'/'+project['profilepic']"
+    [title]="project['title']"
+    [description]="project['description']"
+    [thumbnailSrc]="serverUrl+project['collectionId']+'/'+project['id']+'/'+project['thumbnail']"
+    [buttons]="{demo: project['demo'], repo: project['repo']}"
+  />
+</rm-content>
+

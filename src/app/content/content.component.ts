@@ -9,8 +9,8 @@ import { map } from 'rxjs';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent {
-  private projectsService = inject(ProjectsService);
-  $projects = this.projectsService.$projects;
+  // private projectsService = inject(ProjectsService);
+  // projects$ = this.projectsService.projects$;
 
   ngOnInit(): void {
   }

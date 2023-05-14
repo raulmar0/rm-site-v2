@@ -26,7 +26,7 @@ import { ProjectsService } from './content/projects.service';
 })
 export class AppComponent {
   private projectsService = inject(ProjectsService);
-  serverUrl = 'http://rmperso-vm.southcentralus.cloudapp.azure.com/api/files/hk3si1ki49hr40j/'
-  // serverUrl = 'https://rmperso-pb.fly.dev/api/files/hk3si1ki49hr40j/'
-  $projects = this.projectsService.$projects;
+  $projects = this.projectsService.projects$;
+  serverUrl = this.projectsService.serverUrl;
+
 }

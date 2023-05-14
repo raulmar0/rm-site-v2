@@ -7,15 +7,17 @@ import { from, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class ProjectsService {
+  // serverUrl = 'http://rmperso-vm.southcentralus.cloudapp.azure.com/api/files/hk3si1ki49hr40j/'
+  serverUrl = 'https://rmperso-pb.fly.dev/api/files/'
 
-  // pb = new PocketBase('https://rmperso-pb.fly.dev');
-  pb = new PocketBase('http://rmperso-vm.southcentralus.cloudapp.azure.com');
+  pb = new PocketBase('https://rmperso-pb.fly.dev');
+// pb = new PocketBase('http://rmperso-vm.southcentralus.cloudapp.azure.com');
 
-  $projects = from(this.pb.collection('projects').getFullList({
-      sort: '-created',
-    })).pipe(
-      tap((records) => {
-        console.log(records);
-      })
-    );
-  }
+  projects$ = from(this.pb.collection('projects').getFullList({
+    sort: '-created',
+  })).pipe(
+    tap((records) => {
+      console.log(records);
+    })
+  );
+}
