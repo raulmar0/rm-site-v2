@@ -1,10 +1,10 @@
-<rm-content *ngIf="$projects | async as projects">
-  <rm-post *ngFor="let project of projects "
-    [imgSrc]="serverUrl+project['collectionId']+'/'+project['id']+'/'+project['profilepic']"
-    [title]="project['title']"
-    [description]="project['description']"
-    [thumbnailSrc]="serverUrl+project['collectionId']+'/'+project['id']+'/'+project['thumbnail']"
-    [buttons]="{demo: project['demo'], repo: project['repo']}"
+<rm-content *ngIf="$posts | async as posts">
+  <rm-post *ngFor="let post of posts "
+    [imgSrc]="post.imgSrc"
+    [title]="post.title"
+    [description]="post.description"
+    [thumbnailSrc]="post.thumbnailSrc"
+    [buttons]="post.buttons"
   />
 </rm-content>
 
