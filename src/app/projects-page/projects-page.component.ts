@@ -26,6 +26,6 @@ import { ProjectsService } from '../content/projects.service';
 })
 export class ProjectsPageComponent {
   private projectsService = inject(ProjectsService);
-  $projects = this.projectsService.projects$;
+  $projects = this.projectsService.$projects;
   serverUrl = this.projectsService.serverUrl;
 }

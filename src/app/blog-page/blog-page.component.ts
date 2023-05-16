@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { BioComponent } from '../bio/bio.component';
 import { ContentComponent } from '../content/content.component';
 import { HeaderComponent } from '../header/header.component';
@@ -26,6 +26,11 @@ import { ProjectsService } from '../content/projects.service';
 })
 export class BlogPageComponent {
   private projectsService = inject(ProjectsService);
-  $projects = this.projectsService.projects$;
+  // private route = inject(ActivatedRoute);
+  $projects = this.projectsService.$projects;
   serverUrl = this.projectsService.serverUrl;
+
+  // ngOnInit() {
+  //   console.log(this.route)
+  // }
 }

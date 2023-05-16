@@ -15,6 +15,6 @@ import { RouterLink, RouterModule } from '@angular/router';
 export class NavComponent {
   @Input() navLocation: string | undefined;
   navigationOptions: string[] = [
-    'Projects', 'Blog', 'About'
+    'projects', 'blog', 'about'
   ];
 }

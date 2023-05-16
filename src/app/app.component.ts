@@ -1,6 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { BioComponent } from './bio/bio.component';
 import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,11 +22,34 @@ import { ProjectsService } from './content/projects.service';
     TopBarComponent,
     PostComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   private projectsService = inject(ProjectsService);
-  $projects = this.projectsService.projects$;
+  // private route = inject(ActivatedRoute);
+  private location = inject(Location);
+
+  // currentPath: string | undefined;
+  currentPath = this.location.path().slice(1);
+
+  // constructor(private location: Location) {
+
+  // }
+
+  $projects = this.projectsService.$projects;
   serverUrl = this.projectsService.serverUrl;
+
+  // ngAfterContentChecked
+  ngOnInit() {
+
+    console.log(this.location.path())
+  }
+
+  ngAfterContentChecked() {
+    this.currentPath = this.location.path().slice(1);
+    console.log(this.location.path())
+  }
+
 
 }
