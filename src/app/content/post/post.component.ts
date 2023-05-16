@@ -19,6 +19,7 @@ export class PostComponent {
   @Input() description: string | undefined;
   @Input() thumbnailSrc: string | undefined;
   @Input() buttons: any | undefined;
+  @Input() url: string | undefined;
 
   private projectsService = inject(ProjectsService);
   buttonsTemplate: any | undefined;

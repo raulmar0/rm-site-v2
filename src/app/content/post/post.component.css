@@ -42,11 +42,14 @@
 }
 
 .project--description {
+  padding: 1rem 0;
   grid-area: description;
 }
 
 .project--thumbnail {
   grid-area: thumbnail;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
 }
 
 .project--thumbnail > img {

@@ -33,9 +33,7 @@ export class BlogPageComponent {
   // private route = inject(ActivatedRoute);
   $projects = this.projectsService.$projects;
   serverUrl = this.projectsService.serverUrl;
-  $posts = this.postsService.$posts.pipe(
-    tap(posts => console.log(posts))
-  );
+  $posts = this.postsService.$posts
 
   // ngOnInit() {
   //   console.log(this.route)

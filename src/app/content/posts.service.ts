@@ -9,8 +9,9 @@ export class PostsService {
   private http = inject(HttpClient);
 
   $posts = this.http.get('https://dev.to/api/articles?username=raulmar').pipe(
-    map((posts: any) => {
-      return Object.values(posts).map((post: any) => {
+    map(posts => posts as any[]), // you can leave only this and it still works
+    map(posts => {
+      return (posts).map(post => {
         return {
           title: post.title,
           description: post.description,
@@ -19,6 +20,7 @@ export class PostsService {
           buttons: {
             'Read More': post.url,
           },
+          url: post.url,
         };
       })
     }),
