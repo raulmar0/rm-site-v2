@@ -42,7 +42,6 @@
 }
 
 .project--description {
-  padding: 1rem 0;
   grid-area: description;
 }
 
