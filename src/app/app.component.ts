@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { PostComponent } from './content/post/post.component';
 import { ProjectsService } from './content/projects.service';
+import { toCapitalize } from './utils';
 
 @Component({
   selector: 'app-root',
@@ -27,28 +28,21 @@ import { ProjectsService } from './content/projects.service';
 })
 export class AppComponent {
   private projectsService = inject(ProjectsService);
-  // private route = inject(ActivatedRoute);
   private location = inject(Location);
 
-  // currentPath: string | undefined;
-  currentPath = this.location.path().slice(1);
-
-  // constructor(private location: Location) {
-
-  // }
+  currentPath: string | undefined;
 
   $projects = this.projectsService.$projects;
   serverUrl = this.projectsService.serverUrl;
 
-  // ngAfterContentChecked
-  ngOnInit() {
-
-    console.log(this.location.path())
+  ngAfterContentChecked() {
+    this.manageNav();
   }
 
-  ngAfterContentChecked() {
-    this.currentPath = this.location.path().slice(1);
-    console.log(this.location.path())
+  manageNav() {
+    const path = toCapitalize(this.location.path().slice(1));
+    this.currentPath = path === '' ? 'Projects' : path;
+    console.log(this.location.path().slice(1) === '');
   }
 
 

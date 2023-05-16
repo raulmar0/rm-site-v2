@@ -1,13 +1,13 @@
 import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'rm-nav',
   standalone: true,
   imports: [
     NgFor,
-    RouterModule
+    RouterLink
   ],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
@@ -15,6 +15,6 @@ import { RouterLink, RouterModule } from '@angular/router';
 export class NavComponent {
   @Input() navLocation: string | undefined;
   navigationOptions: string[] = [
-    'projects', 'blog', 'about'
+    'Projects', 'Blog', 'About'
   ];
 }
