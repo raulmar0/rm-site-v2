@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { BioService } from './bio.service';
 
 @Component({
   selector: 'rm-bio',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class BioComponent {
 
+  private bio = inject(BioService);
+
+  ngOnInit(): void {
+    this.bio.$bio.subscribe()
+  }
 }

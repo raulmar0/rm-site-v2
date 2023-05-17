@@ -8,6 +8,7 @@ import { NavComponent } from '../nav/nav.component';
 import { TopBarComponent } from '../top-bar/top-bar.component';
 import { PostComponent } from '../content/post/post.component';
 import { ProjectsService } from '../content/projects.service';
+import { BioService } from '../bio/bio.service';
 
 @Component({
   selector: 'app-about-page',
@@ -26,6 +27,8 @@ import { ProjectsService } from '../content/projects.service';
 })
 export class AboutPageComponent {
   private projectsService = inject(ProjectsService);
-  $projects = this.projectsService.$projects;
-  serverUrl = this.projectsService.serverUrl;
+  private BioService = inject(BioService);
+
+  $about = this.BioService.$about;
+
 }
