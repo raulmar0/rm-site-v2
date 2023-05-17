@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, Input, inject } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'rm-nav',

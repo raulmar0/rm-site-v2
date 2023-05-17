@@ -17,8 +17,6 @@ export class ProjectsService {
     sort: '-created',
   })).pipe(
     shareReplay(1),
-    tap((records) => {
-      console.log(records);
-    })
+    // tap((records) => { console.log(records); })
   );
 }

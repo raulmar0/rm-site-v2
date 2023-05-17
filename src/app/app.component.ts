@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { BioComponent } from './bio/bio.component';
 import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
@@ -42,7 +42,6 @@ export class AppComponent {
   manageNav() {
     const path = toCapitalize(this.location.path().slice(1));
     this.currentPath = path === '' ? 'Projects' : path;
-    console.log(this.location.path().slice(1) === '');
   }
 
 

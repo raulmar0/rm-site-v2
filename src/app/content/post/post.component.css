@@ -26,7 +26,8 @@
 .project--img > img {
   width: 100%;
   border-radius: 50%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background-color: #dddddd;
 }
 
 .project--name > h4, .project--description > p {

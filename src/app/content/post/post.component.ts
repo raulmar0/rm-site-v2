@@ -1,15 +1,10 @@
-import { CommonModule } from '@angular/common';
-import { NgFor } from '@angular/common';
-import { Component, Input, inject } from '@angular/core';
-import { ProjectsService } from '../projects.service';
-import PocketBase from 'pocketbase';
-import { map } from 'rxjs';
-
+import { NgFor, NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'rm-post',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
@@ -20,9 +15,11 @@ export class PostComponent {
   @Input() thumbnailSrc: string | undefined;
   @Input() buttons: any | undefined;
   @Input() url: string | undefined;
+  @Input() isBlog?: boolean | undefined;
 
-  private projectsService = inject(ProjectsService);
   buttonsTemplate: any | undefined;
+
+
   ngOnInit(): void {
     this.buttonsTemplate = Object.entries(this.buttons)
   }
