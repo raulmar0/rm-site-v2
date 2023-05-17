@@ -17,7 +17,8 @@ export class BioService {
     filter: 'username = "raulmar"'
   })).pipe(
     shareReplay(1),
-    tap((records) => { console.log('about', records); })
+
+    tap((records) => { console.log('abouttt', records); })
   );
 
   $about = this.$bio.pipe(

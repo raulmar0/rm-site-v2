@@ -1,14 +1,14 @@
-<div class="bio--grid-container">
+<div class="bio--grid-container" *ngIf="$bio | async as bio">
   <div class="vertical-center bio--description">
-    <p>Crafting high performance software and elegant digital experiences</p>
+    <p>{{ bio.bio }}</p>
   </div>
   <div class="vertical-center bio--location">
-    <span class="bio-span">📍 Mexico</span>
+    <span class="bio-span">📍 {{bio.location}}</span>
   </div>
   <div class="vertical-center bio--url">
-    <span href="https://raulmar.me" class="bio-span">🔗 <a href="raulmar.me">raulmar.me</a></span>
+    <span class="bio-span">🔗 <a [href]="bio.link">raulmar.me</a></span>
   </div>
   <div class="vertical-center bio--experience">
-    <span class="bio-span">🧑‍💻 More than a year of experience</span>
+    <span class="bio-span">🧑‍💻 {{ bio.experience }}</span>
   </div>
 </div>
