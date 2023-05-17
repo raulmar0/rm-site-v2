@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rm-site-v2/browser",
+            "outputPath": "dist/rm-site-v2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -101,60 +101,6 @@
             ],
             "scripts": []
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/rm-site-v2/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media"
-            },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false,
-              "vendorChunk": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "rm-site-v2:build:development",
-              "serverTarget": "rm-site-v2:server:development"
-            },
-            "production": {
-              "browserTarget": "rm-site-v2:build:production",
-              "serverTarget": "rm-site-v2:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "rm-site-v2:build:production",
-              "serverTarget": "rm-site-v2:server:production"
-            },
-            "development": {
-              "browserTarget": "rm-site-v2:build:development",
-              "serverTarget": "rm-site-v2:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
