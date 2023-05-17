@@ -14,7 +14,7 @@ export class ProjectsService {
 // pb = new PocketBase('http://rmperso-vm.southcentralus.cloudapp.azure.com');
 
   $projects = from(this.pb.collection('projects').getFullList({
-    sort: '-created',
+    sort: '+created',
   })).pipe(
     shareReplay(1),
     // tap((records) => { console.log(records); })
