@@ -24,6 +24,6 @@ export class BioComponent {
         experience: bio['experience'],
       }
     }),
-    tap(bio => console.log(bio))
+    // tap(bio => console.log(bio))
   );
 }

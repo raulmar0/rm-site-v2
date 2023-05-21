@@ -57,13 +57,11 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with ng
-        run: ${{ steps.detect-package-manager.outputs.runner }} ng build --configuration production --base-href https://raulmar0.github.io/rm-site-v2/
-      - name: Static HTML export with ng
-        run: ${{ steps.detect-package-manager.outputs.runner }} scully
+        run: ${{ steps.detect-package-manager.outputs.runner }} prerender
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./dist/static
+          path: ./dist/rm-site-v2/browser
 
 
 

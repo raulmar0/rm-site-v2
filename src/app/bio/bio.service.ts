@@ -18,11 +18,11 @@ export class BioService {
   })).pipe(
     shareReplay(1),
 
-    tap((records) => { console.log('abouttt', records); })
+    // tap((records) => { console.log('abouttt', records); })
   );
 
   $about = this.$bio.pipe(
     map(records => records.map(record => record['about'])),
-    tap((records) => { console.log('about', records); })
+    // tap((records) => { console.log('about', records); })
   )
 }
