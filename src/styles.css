@@ -42,6 +42,7 @@ body {
 .about-content {
   & h1, p {
     font-family: 'Inter', sans-serif;
+    color: var(--secondary-color);
   }
   & p {
     font-size: 1.3rem;
