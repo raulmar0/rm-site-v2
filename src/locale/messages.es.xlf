@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="bio.bio }}"/></source>
+        <target>Creando software de alto rendimiento y experiencias digitales elegantes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bio/bio.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7509321313777048880" datatype="html">
+        <source>📍 <x id="INTERPOLATION" equiv-text="{{bio.location}}"/></source>
+        <target>📍 México</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bio/bio.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="415620555342258668" datatype="html">
+        <source>🧑‍💻 <x id="INTERPOLATION" equiv-text="{{ bio.experience }}"/></source>
+        <target>🧑‍💻 Más de un año de experiencia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bio/bio.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2827984212740060090" datatype="html">
+        <source>Read more</source>
+        <target>Leer más</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/content/posts.service.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="466492426610382126" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ bio.job_title }}"/></source>
+        <target> Desarrollador de Producto</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7091571651222742304" datatype="html">
+        <source>Projects</source>
+        <target>Proyectos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav/nav.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7751010942038334793" datatype="html">
+        <source>Blog</source>
+        <target>Blog</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav/nav.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <target>Sobre mí</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav/nav.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

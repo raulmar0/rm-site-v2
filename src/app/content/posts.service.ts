@@ -15,7 +15,7 @@ export class PostsService {
       return (posts).map(post => {
         return {
           title: post.title,
-          description: post.description.substring(0, 60) + `... <a href="${post.url}">Read more</a>`,
+          description: post.description.substring(0, 60) + `... <a href="${post.url}">${$localize`Read more`}</a>`,
           imgSrc: post.user.profile_image_90,
           thumbnailSrc: post.social_image,
           buttons: {

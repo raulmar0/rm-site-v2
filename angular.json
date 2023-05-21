@@ -4,6 +4,19 @@
   "newProjectRoot": "projects",
   "projects": {
     "rm-site-v2": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": "/fr/"
+          },
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": "/es/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,6 +75,16 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "fr": {
+              "localize": ["fr"],
+              "outputPath": "dist/rm-site-v2/fr",
+              "i18nMissingTranslation": "error"
+            },
+            "es": {
+              "localize": ["es"],
+              "outputPath": "dist/rm-site-v2/es",
+              "i18nMissingTranslation": "error"
             }
           },
           "defaultConfiguration": "production"
@@ -74,6 +97,12 @@
             },
             "development": {
               "browserTarget": "rm-site-v2:build:development"
+            },
+            "fr": {
+              "browserTarget": "rm-site-v2:build:fr"
+            },
+            "es": {
+              "browserTarget": "rm-site-v2:build:es"
             }
           },
           "defaultConfiguration": "development"

@@ -13,8 +13,13 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-  @Input() navLocation: string | undefined;
-  navigationOptions: string[] = [
-    'Projects', 'Blog', 'About'
+  @Input() currentRoute: string | undefined;
+
+  navigationRoutes: string[] = [
+    `Projects`, `Blog`, `About`
+  ];
+
+  navigationPlaceholder: string[] = [
+    $localize`Projects`, $localize`Blog`, $localize`About`
   ];
 }
