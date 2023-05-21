@@ -25,7 +25,7 @@
 }
 .switch::after {
   content: '☀️';
-  font-size: 1rem;
+  font-size: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@
 
 input[type='checkbox']:checked + .switch::after {
   content: '🌙';
-  transform: translateX(25px);
+  transform: translateX(30px);
   background-color: var(--border-color);
 }
 
