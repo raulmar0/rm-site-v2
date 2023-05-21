@@ -19,8 +19,8 @@ export class HeaderComponent {
     map(bio => bio[0]),
     map(bio => {
       return {
-        cover_img: this.serverUrl + bio['collectionId'] + '/'+bio['id'] + '/' + bio['cover_img'],
-        profile_img: this.serverUrl + bio['collectionId'] + '/'+bio['id'] + '/' + bio['profile_img'],
+        cover_img: this.serverUrl + bio['collectionId'] + '/' + bio['id'] + '/' + bio['cover_img'],
+        profile_img: this.serverUrl + bio['collectionId'] + '/' + bio['id'] + '/' + bio['profile_img'],
         username: bio['username'],
         job_title: bio['job_title'],
       }

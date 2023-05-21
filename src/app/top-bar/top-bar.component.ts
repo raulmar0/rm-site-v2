@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class TopBarComponent {
 
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
 }

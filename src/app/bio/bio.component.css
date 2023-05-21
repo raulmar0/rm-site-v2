@@ -7,7 +7,7 @@
   grid-template-columns: 90px 1fr;
   grid-template-rows: 60px 1fr 1fr;
   font-family: 'Inter', sans-serif;
-  letter-spacing: -0.5px;
+  letter-spacing: var(--letter-spacing-xs);
   font-size: 1.4rem;
 }
 
@@ -18,17 +18,20 @@
 
 .bio--description {
  /* background-color: red; */
+ color: var(--primary-color);
  grid-row: 1 / 2;
  grid-column: 1 / 3;
 }
 
 .bio--description > p {
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
+  color: var(--accent-color);
 }
 
 .bio-span, a {
-  font-weight: 500;
-  color: #818181;
+  font-weight: var(--font-weight-normal);
+  color: var(--secondary-color);
+  /* color: #818181; */
 }
 
 .bio--location {

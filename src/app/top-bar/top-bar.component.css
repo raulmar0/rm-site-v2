@@ -6,7 +6,7 @@
 .top-bar {
   max-width: 100%;
   height: 64px;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   gap: 2rem;
   justify-content: flex-end;
@@ -19,89 +19,45 @@
   display: inline-block;
   width: 52px;
   height: 26px;
-  background-color: #ccc;
+  background-color: var(--border-color);
   border-radius: 40px;
   cursor: pointer;
 }
 .switch::after {
-  content: '';
+  content: '☀️';
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 18px;
   height: 18px;
   border-radius: 40px;
-  background-color: #333;
+  background-color: var(--accent-color);
   left: 5px;
   top: 4px;
   transition: all 0.4s
 }
 
 input[type='checkbox']:checked + .switch::after {
+  content: '🌙';
   transform: translateX(25px);
-  background-color: #ccc;
+  background-color: var(--border-color);
 }
 
 input[type='checkbox']:checked + .switch {
-  background-color: #333;
+  background-color: var(--accent-color);
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: -0.5px;
-  font-weight: 800;
-}
-
-.dropdown-btn--container {
-  border-radius: 5px;
-  background-color: #ccc;
-  color: #333;
-  padding: 6px 10px;
   cursor: pointer;
-  display: flex;
-  justify-content: space-around;
-  gap: 0.5rem;
-}
-
-.dropdown-btn--container > div {
-  display: flex;
-  align-items: center;
-}
-
-.dropdown-btn {
-  background-color: #ccc;
-  color: #333;
-  border: none;
-  font-size: 1.4rem;
-  font-weight: 800;
-  padding: 0;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 1.8rem;
-  left: 1rem;
-  display: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
+  height: 26px;
   border-radius: 5px;
-}
-
-.dropdown-menu.visible {
-  display: block;
-}
-
-.dropdown-menu li {
-  list-style: none;
-}
-
-.dropdown-menu li a {
-  color: #333;
-  text-decoration: none;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #ccc;
-  color: #fff;
+  background-color: var(--border-color);
+  color: var(--accent-color);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.4rem;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  padding: 0 0.5rem;
+  border-right: 0.5rem solid transparent
 }
