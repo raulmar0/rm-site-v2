@@ -9,6 +9,7 @@ body {
   --secondary-color: #666666;
   --border-color: #d2d2d2;
   --accent-color: #375461;
+  --container-color: #375461;
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
@@ -19,6 +20,7 @@ body {
 body.dark-theme {
   --main-bg-color: #000;
   --secondary-color: #a9b3b6;
+  --container-color: #476c7c;
   --border-color: #375461;
   --accent-color: #fff;
 
@@ -31,7 +33,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--main-bg-color);
+  background-color: var(--border-color);
 }
 
 .vertical-center {
@@ -50,6 +52,7 @@ body {
   & img {
     width: 90%;
     height: auto;
+    border-radius: 0.5rem;
   }
   & p:has(img) {
     display: flex;

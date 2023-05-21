@@ -1,6 +1,15 @@
+.container {
+  background-color: var(--main-bg-color);
+}
+
 @media (min-width: 480px) {
   .container {
     max-width: 480px;
-    margin: 0 auto;
+    height: calc(100vh - 80px);
+    overflow: scroll;
+    margin: 40px auto;
+    box-shadow: 0 0 0 2rem var(--container-color);
+    border-radius: 35px;
+    position: relative;
   }
 }

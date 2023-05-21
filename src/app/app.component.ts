@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { PostComponent } from './content/post/post.component';
 import { ProjectsService } from './content/projects.service';
 import { toCapitalize } from './utils';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { toCapitalize } from './utils';
     HeaderComponent,
     NavComponent,
     TopBarComponent,
+    FooterComponent,
     PostComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
