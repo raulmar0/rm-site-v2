@@ -21,6 +21,7 @@ import { ProjectsService } from '../content/projects.service';
     NavComponent,
     TopBarComponent,
     PostComponent],
+  host: { ngSkipHydration: 'true'},
   templateUrl: './projects-page.component.html',
   styleUrls: ['./projects-page.component.css']
 })

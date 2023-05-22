@@ -24,6 +24,7 @@ import { Observable, catchError, map, of, tap } from 'rxjs';
     TopBarComponent,
     PostComponent,
     NgForOf],
+  host: { ngSkipHydration: 'true'},
   templateUrl: './blog-page.component.html',
   styleUrls: ['./blog-page.component.css']
 })
