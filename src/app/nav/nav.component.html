@@ -1,7 +1,7 @@
 <nav>
   <ul>
     <li *ngFor="let route of navigationRoutes; let i = index" [class.active]="currentRoute === route">
-      <a [routerLink]="['/' + route.toLowerCase()]">{{ navigationPlaceholder[i] }}</a>
+      <a [routerLink]="['/rm-site-v2/' + route.toLowerCase()]">{{ navigationPlaceholder[i] }}</a>
     </li>
   </ul>
 </nav>
