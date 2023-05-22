@@ -14,16 +14,15 @@ export class BioComponent {
 
   private bio = inject(BioService);
 
-  $bio = this.bio.$bio.pipe(
-    map(bio => bio[0]),
-    map(bio => {
+  $bio = this.bio.$user.pipe(
+    map(user => user as any),
+    map(user => {
       return {
-        bio: bio['bio'],
-        location: bio['location'],
-        link: bio['link'],
-        experience: bio['experience'],
+        bio: user['bio'],
+        location: user['location'],
+        link: user['link'],
+        experience: user['experience'],
       }
     }),
-    // tap(bio => console.log(bio))
   );
 }

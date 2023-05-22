@@ -1,22 +1,23 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
 
 import PocketBase from 'pocketbase';
-import { from, shareReplay, tap } from 'rxjs';
+import { from, map, shareReplay, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectsService {
-  // serverUrl = 'http://rmperso-vm.southcentralus.cloudapp.azure.com/api/files/hk3si1ki49hr40j/'
+  private http = inject(HttpClient);
+
   serverUrl = 'https://rmperso-pb.fly.dev/api/files/'
 
-  pb = new PocketBase('https://rmperso-pb.fly.dev');
-// pb = new PocketBase('http://rmperso-vm.southcentralus.cloudapp.azure.com');
-
-  $projects = from(this.pb.collection('projects').getFullList({
-    sort: '+created',
-  })).pipe(
+  $projects = this.http.get('https://rmperso-pb.fly.dev/api/collections/projects/records?sort=+created')
+  .pipe(
     shareReplay(1),
-    // tap((records) => { console.log(records); })
-  );
+    map(res => res as any),
+    map(res => res.items),
+    tap(projects => console.log('$projects', projects))
+  )
+
 }

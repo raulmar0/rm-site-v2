@@ -15,14 +15,13 @@ export class HeaderComponent {
   serverUrl = 'https://rmperso-pb.fly.dev/api/files/'
 
 
-  $bio = this.bio.$bio.pipe(
-    map(bio => bio[0]),
-    map(bio => {
+  $bio = this.bio.$user.pipe(
+    map(user => {
       return {
-        cover_img: this.serverUrl + bio['collectionId'] + '/' + bio['id'] + '/' + bio['cover_img'],
-        profile_img: this.serverUrl + bio['collectionId'] + '/' + bio['id'] + '/' + bio['profile_img'],
-        username: bio['username'],
-        job_title: bio['job_title'],
+        cover_img: this.serverUrl + user.collectionId + '/' + user['id'] + '/' + user['cover_img'],
+        profile_img: this.serverUrl + user['collectionId'] + '/' + user['id'] + '/' + user['profile_img'],
+        username: user['username'],
+        job_title: user['job_title'],
       }
     })
   );

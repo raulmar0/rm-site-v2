@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
 
 import PocketBase from 'pocketbase';
 import { from, map, shareReplay, tap } from 'rxjs';
@@ -7,22 +8,19 @@ import { from, map, shareReplay, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class BioService {
-  // serverUrl = 'http://rmperso-vm.southcentralus.cloudapp.azure.com/api/files/hk3si1ki49hr40j/'
+  private http = inject(HttpClient);
+
   serverUrl = 'https://rmperso-pb.fly.dev/api/files/'
 
-  pb = new PocketBase('https://rmperso-pb.fly.dev');
-// pb = new PocketBase('http://rmperso-vm.southcentralus.cloudapp.azure.com');
-
-  $bio = from(this.pb.collection('users').getFullList({
-    filter: 'username = "raulmar"'
-  })).pipe(
+  $user = this.http.get('https://rmperso-pb.fly.dev/api/collections/users/records?filter=(username = "raulmar")')
+  .pipe(
     shareReplay(1),
+    map(user => user as any),
+    map(user => user.items[0]),
+    tap((records) => { console.log('$bio', records); })
+  )
 
-    // tap((records) => { console.log('abouttt', records); })
-  );
-
-  $about = this.$bio.pipe(
-    map(records => records.map(record => record['about'])),
-    // tap((records) => { console.log('about', records); })
+  $about = this.$user.pipe(
+    map(user => user.about),
   )
 }

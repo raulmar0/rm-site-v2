@@ -19,7 +19,6 @@ export class PostComponent {
 
   buttonsTemplate: any | undefined;
 
-
   ngOnInit(): void {
     this.buttonsTemplate = Object.entries(this.buttons)
   }
