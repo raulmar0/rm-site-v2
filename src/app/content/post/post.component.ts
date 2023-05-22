@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
   selector: 'rm-post',
   standalone: true,
   imports: [NgFor, NgIf],
+  host: { ngSkipHydration: 'true'},
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
