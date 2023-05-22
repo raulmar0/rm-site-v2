@@ -28,8 +28,6 @@
     "@angular/platform-server": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@nguniversal/express-engine": "^16.0.2",
-    "@scullyio/init": "^2.1.21",
-    "@scullyio/scully-plugin-puppeteer": "^2.1.41",
     "express": "^4.15.2",
     "pocketbase": "^0.14.4",
     "rxjs": "~7.8.0",
