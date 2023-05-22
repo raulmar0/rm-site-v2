@@ -1,4 +1,4 @@
-<rm-content *ngIf="$projects | async as projects">
+<rm-content ngSkipHydration *ngIf="$projects | async as projects">
   <rm-post ngSkipHydration *ngFor="let project of projects "
     [imgSrc]="serverUrl+project['collectionId']+'/'+project['id']+'/'+project['profilepic']"
     [title]="project['title']"
