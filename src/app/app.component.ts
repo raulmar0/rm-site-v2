@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     PostComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  host: { ngSkipHydration: 'true'},
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
