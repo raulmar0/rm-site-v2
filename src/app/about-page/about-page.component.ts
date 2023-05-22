@@ -27,7 +27,6 @@ import { BioService } from '../bio/bio.service';
   styleUrls: ['./about-page.component.css']
 })
 export class AboutPageComponent {
-  private projectsService = inject(ProjectsService);
   private BioService = inject(BioService);
 
   $about = this.BioService.$about;

@@ -8,7 +8,8 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   standalone: true,
   templateUrl: './bio.component.html',
-  styleUrls: ['./bio.component.css']
+  styleUrls: ['./bio.component.css'],
+  host: { ngSkipHydration: 'true' }
 })
 export class BioComponent {
 
