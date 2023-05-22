@@ -1,7 +1,7 @@
 <div class="container">
   <rm-top-bar/>
-  <rm-header/>
-  <rm-bio/>
+  <rm-header ngSkipHydration/>
+  <rm-bio ngSkipHydration/>
   <rm-nav [currentRoute]="currentPath"/>
   <router-outlet></router-outlet>
   <rm-footer></rm-footer>
