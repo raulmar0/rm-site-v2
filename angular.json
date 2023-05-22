@@ -39,7 +39,6 @@
             "outputPath": "dist/rm-site-v2/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "baseHref": "/rm-site-v2/",
             "polyfills": [
               "zone.js"
             ],
