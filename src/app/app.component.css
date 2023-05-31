@@ -2,14 +2,33 @@
   background-color: var(--main-bg-color);
 }
 
+
+
+
 @media (min-width: 480px) {
   .container {
     max-width: 480px;
     height: calc(100vh - 80px);
-    overflow: scroll;
+    overflow-y: overlay;
     margin: 40px auto;
     box-shadow: 0 0 0 2rem var(--container-color);
     border-radius: 35px;
     position: relative;
+  }
+
+  .container::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin: 6.5rem 0;
+  }
+
+  .container::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 10px;
   }
 }

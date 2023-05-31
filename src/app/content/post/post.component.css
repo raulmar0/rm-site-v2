@@ -65,7 +65,7 @@
 .project--buttons {
   grid-area: buttons;
   gap: 1rem;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .project--buttons > div > button {

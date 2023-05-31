@@ -15,6 +15,7 @@ body {
   --font-weight-normal: 400;
   --letter-spacing-xs: -0.04rem;
   --letter-spacing-sm: -0.025rem;
+  --scrollbar-color: #d2d2d2
 }
 
 body.dark-theme {
