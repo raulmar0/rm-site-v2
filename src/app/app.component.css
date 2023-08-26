@@ -2,9 +2,6 @@
   background-color: var(--main-bg-color);
 }
 
-
-
-
 @media (min-width: 480px) {
   .container {
     max-width: 480px;
@@ -35,5 +32,68 @@
 
   .container:hover::-webkit-scrollbar-thumb {
     visibility: visible;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  --main-bg-color: #fff;
+  --main-text-color: #420093;
+  --primary-color: #000;
+  --secondary-color: #666666;
+  --border-color: #d2d2d2;
+  --accent-color: #375461;
+  --container-color: #375461;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --letter-spacing-xs: -0.04rem;
+  --letter-spacing-sm: -0.025rem;
+  --scrollbar-color: #d2d2d2
+}
+
+body.dark-theme {
+  --main-bg-color: #000;
+  --secondary-color: #a9b3b6;
+  --container-color: #476c7c;
+  --border-color: #375461;
+  --accent-color: #fff;
+  --scrollbar-color: #666666;
+
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--border-color);
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.about-content {
+  & h1, p {
+    font-family: 'Inter', sans-serif;
+    color: var(--secondary-color);
+  }
+  & p {
+    font-size: 1.3rem;
+  }
+  & img {
+    width: 90%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  & p:has(img) {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0
   }
 }

@@ -1,0 +1,11 @@
+identifier: lbl0rci9v6r50cld
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: rm-site-v2
+homeFolder: /Users/raulmar/Code/rm-site-v2
+distFolder: dist/rm-site-v2/browser
+outDir: /Users/raulmar/Code/rm-site-v2/dist/static
+handle404: ''
+allowErrorCollect: false
