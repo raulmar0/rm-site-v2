@@ -14,7 +14,8 @@
     "dev:ssr": "ng run rm-site-v2:serve-ssr",
     "serve:ssr": "node dist/rm-site-v2/server/main.js",
     "build:ssr": "ng build && ng run rm-site-v2:server",
-    "prerender": "ng run rm-site-v2:prerender"
+    "prerender": "ng run rm-site-v2:prerender",
+    "build:scully": "npm run build && npx scully --project rm-site-v2"
   },
   "private": true,
   "dependencies": {
