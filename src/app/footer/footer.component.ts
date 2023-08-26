@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
-  host: { ngSkipHydration: 'true' }
 })
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();

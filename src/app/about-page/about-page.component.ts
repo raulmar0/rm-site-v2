@@ -22,7 +22,6 @@ import { BioService } from '../bio/bio.service';
     NavComponent,
     TopBarComponent,
     PostComponent],
-  host: { ngSkipHydration: 'true'},
   templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.css']
 })

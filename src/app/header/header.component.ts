@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  host: { ngSkipHydration: 'true' }
 })
 export class HeaderComponent {
   private bio = inject(BioService);

@@ -7,7 +7,6 @@ import { map } from 'rxjs';
   standalone: true,
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
-  host: { ngSkipHydration: 'true' }
 })
 export class ContentComponent {
   // private projectsService = inject(ProjectsService);
