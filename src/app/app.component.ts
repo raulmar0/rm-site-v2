@@ -11,6 +11,9 @@ import { ProjectsService } from './content/projects.service';
 import { toCapitalize } from './utils';
 import { FooterComponent } from './footer/footer.component';
 import { ViewEncapsulation } from '@angular/core';
+import { BioService } from './bio/bio.service';
+import { PostsService } from './content/posts.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -33,11 +36,17 @@ import { ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   private projectsService = inject(ProjectsService);
   private location = inject(Location);
+  private bioService = inject(BioService);
+  private postsService = inject(PostsService);
 
   currentPath: string | undefined;
 
+  $user = this.bioService.$user;
   $projects = this.projectsService.$projects;
+  $posts = this.postsService.$posts;
   serverUrl = this.projectsService.serverUrl;
+
+  $ready = forkJoin([this.$user, this.$projects, this.$posts]);
 
   ngAfterContentChecked() {
     this.manageNav();
