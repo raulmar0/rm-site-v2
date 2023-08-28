@@ -1,3 +1,9 @@
+@media (min-width: 480px) {
+  .header--img > img {
+    border-radius: 5px;
+  }
+}
+
 .header--grid-container {
   display: grid;
   width: 100%;

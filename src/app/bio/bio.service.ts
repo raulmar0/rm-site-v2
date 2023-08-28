@@ -17,7 +17,7 @@ export class BioService {
     shareReplay(1),
     map(user => user as any),
     map(user => user.items[0]),
-    tap((records) => { console.log('$bio', records); })
+    // tap((records) => { console.log('$bio', records); })
   )
 
   $about = this.$user.pipe(

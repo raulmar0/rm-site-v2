@@ -17,7 +17,7 @@ export class ProjectsService {
     shareReplay(1),
     map(res => res as any),
     map(res => res.items),
-    tap(projects => console.log('$projects', projects))
+    // tap(projects => console.log('$projects', projects))
   )
 
 }

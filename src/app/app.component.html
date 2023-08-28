@@ -1,8 +1,13 @@
 <div class="container">
-  <rm-top-bar/>
-  <rm-header  />
-  <rm-bio  />
-  <rm-nav [currentRoute]="currentPath"/>
-  <router-outlet></router-outlet>
-  <rm-footer  ></rm-footer>
+  <div class="profile">
+    <rm-top-bar/>
+    <rm-header  />
+    <rm-bio  />
+  </div>
+  <div class="vertical-divider"></div>
+  <div class="content">
+    <rm-nav [currentRoute]="currentPath"/>
+    <router-outlet></router-outlet>
+    <rm-footer  ></rm-footer>
+  </div>
 </div>

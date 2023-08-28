@@ -4,13 +4,33 @@
 
 @media (min-width: 480px) {
   .container {
-    max-width: 480px;
-    height: calc(100vh - 80px);
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 5rem;
     overflow-y: overlay;
-    margin: 40px auto;
-    box-shadow: 0 0 0 2rem var(--container-color);
-    border-radius: 35px;
     position: relative;
+    display: flex;
+    /* gap: 5rem; */
+  }
+
+  .vertical-divider {
+    width: 1px;
+    height: 95vh;
+    background-color: var(--border-color);
+    margin: calc(5vh / 2) 2.5rem
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 480px;
+  }
+
+  .content {
+    height: 100vh;
+    overflow-y: overlay;
+    max-width: 480px;
   }
 
   .container::-webkit-scrollbar-track {
@@ -19,7 +39,7 @@
   }
 
   .container::-webkit-scrollbar {
-    width: 6px;
+    width: 0px;
     background-color: transparent;
 
   }
