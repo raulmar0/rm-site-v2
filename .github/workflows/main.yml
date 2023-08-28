@@ -58,6 +58,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with ng
         run: npm run build --configuraion=production --aot
+      - name: Copy file
+        run: |
+          cp "dist/rm-site-v2/browser/index.html" "dist/rm-site-v2/browser/404.html"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
