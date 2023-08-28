@@ -10,6 +10,7 @@ import { PostComponent } from './content/post/post.component';
 import { ProjectsService } from './content/projects.service';
 import { toCapitalize } from './utils';
 import { FooterComponent } from './footer/footer.component';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     PostComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   private projectsService = inject(ProjectsService);
