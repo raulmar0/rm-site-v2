@@ -61,7 +61,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./dist/rm-site-v2
+          path: ./dist/rm-site-v2/browser
 
 
 
