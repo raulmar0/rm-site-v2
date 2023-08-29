@@ -40,8 +40,7 @@ export class AppComponent {
   $user = this.bioService.$user;
   $projects = this.projectsService.$projects;
   $posts = this.postsService.$posts;
-  serverUrl = this.projectsService.serverUrl;
 
-  // $ready = forkJoin([this.$user, this.$projects, this.$posts]);
+  $ready = forkJoin([this.$user, this.$projects, this.$posts]);
 
 }
