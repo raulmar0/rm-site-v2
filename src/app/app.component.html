@@ -1,4 +1,4 @@
-<div class="container" *ngIf="$ready | async">
+<div class="container">
   <div class="profile">
     <rm-top-bar/>
     <rm-header  />
@@ -6,7 +6,7 @@
   </div>
   <div class="vertical-divider"></div>
   <div class="content">
-    <rm-nav [currentRoute]="currentPath"/>
+    <rm-nav/>
     <router-outlet></router-outlet>
     <rm-footer  ></rm-footer>
   </div>

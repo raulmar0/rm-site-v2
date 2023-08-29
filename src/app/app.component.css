@@ -6,31 +6,31 @@
   .container {
     width: 960px;
     margin: 0 auto;
-    padding: 0 5rem;
+    padding: 0 4rem;
     overflow-y: overlay;
     position: relative;
     display: flex;
-    /* gap: 5rem; */
+    gap: 4rem;
   }
 
   .vertical-divider {
     width: 1px;
     height: 95vh;
     background-color: var(--border-color);
-    margin: calc(5vh / 2) 2.5rem
+    margin: calc(5vh / 2) 0;
   }
 
   .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 480px;
+    width: 480px;
   }
 
   .content {
     height: 100vh;
     overflow-y: overlay;
-    max-width: 480px;
+    width: 480px;
   }
 
   .container::-webkit-scrollbar-track {
@@ -39,7 +39,7 @@
   }
 
   .container::-webkit-scrollbar {
-    width: 0px;
+    width: 6px;
     background-color: transparent;
 
   }

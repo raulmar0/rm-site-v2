@@ -1,3 +1,17 @@
+
+@media (min-width: 480px) {
+  nav {
+    margin: 0 !important;
+  }
+}
+
+
+li:has(a.active) {
+  border-bottom: 2px solid var(--accent-color);
+  box-sizing: border-box;
+}
+
+
 nav {
   height: 50px;
   margin: 0 20px;
@@ -27,9 +41,4 @@ nav > ul > li {
 nav > ul > li > a {
   text-decoration: none;
   color: var(--accent-color);
-}
-
-.active {
-  border-bottom: 2px solid var(--accent-color);
-  box-sizing: border-box;
 }

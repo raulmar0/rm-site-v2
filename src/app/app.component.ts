@@ -8,7 +8,6 @@ import { NavComponent } from './nav/nav.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { PostComponent } from './content/post/post.component';
 import { ProjectsService } from './content/projects.service';
-import { toCapitalize } from './utils';
 import { FooterComponent } from './footer/footer.component';
 import { ViewEncapsulation } from '@angular/core';
 import { BioService } from './bio/bio.service';
@@ -35,27 +34,14 @@ import { forkJoin } from 'rxjs';
 })
 export class AppComponent {
   private projectsService = inject(ProjectsService);
-  private location = inject(Location);
   private bioService = inject(BioService);
   private postsService = inject(PostsService);
-
-  currentPath: string | undefined;
 
   $user = this.bioService.$user;
   $projects = this.projectsService.$projects;
   $posts = this.postsService.$posts;
   serverUrl = this.projectsService.serverUrl;
 
-  $ready = forkJoin([this.$user, this.$projects, this.$posts]);
-
-  ngAfterContentChecked() {
-    this.manageNav();
-  }
-
-  manageNav() {
-    const path = toCapitalize(this.location.path().slice(1));
-    this.currentPath = path === '' ? 'Projects' : path;
-  }
-
+  // $ready = forkJoin([this.$user, this.$projects, this.$posts]);
 
 }
