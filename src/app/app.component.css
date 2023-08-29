@@ -6,18 +6,18 @@
   .container {
     width: 960px;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 calc(var(--desktop-x-padding) / 2) 0 var(--desktop-x-padding);
     overflow-y: overlay;
     position: relative;
     display: flex;
-    gap: 4rem;
+    gap: var(--desktop-x-padding);
   }
 
   .vertical-divider {
     width: 1px;
-    height: 95vh;
+    height: calc(100vh - var(--desktop-y-padding) * 2);
     background-color: var(--border-color);
-    margin: calc(5vh / 2) 0;
+    margin: var(--desktop-y-padding) 0;
   }
 
   .profile {
@@ -31,26 +31,28 @@
     height: 100vh;
     overflow-y: overlay;
     width: 480px;
+    padding-right: calc(var(--desktop-x-padding) / 2);
   }
 
-  .container::-webkit-scrollbar-track {
+  .content::-webkit-scrollbar-track {
     background-color: transparent;
-    margin: 6.5rem 0;
+    margin: var(--desktop-x-padding) 0;
   }
 
-  .container::-webkit-scrollbar {
+  .content::-webkit-scrollbar {
     width: 6px;
     background-color: transparent;
 
   }
 
-  .container::-webkit-scrollbar-thumb {
+  .content::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-color);
     border-radius: 10px;
     visibility: hidden;
+
   }
 
-  .container:hover::-webkit-scrollbar-thumb {
+  .content:hover::-webkit-scrollbar-thumb {
     visibility: visible;
   }
 }
@@ -70,7 +72,9 @@ body {
   --font-weight-normal: 400;
   --letter-spacing-xs: -0.04rem;
   --letter-spacing-sm: -0.025rem;
-  --scrollbar-color: #d2d2d2
+  --scrollbar-color: #d2d2d2;
+  --desktop-x-padding: 4rem;
+  --desktop-y-padding: 2.5rem;
 }
 
 body.dark-theme {
