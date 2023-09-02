@@ -12,10 +12,12 @@
     <p [innerHTML]="description"></p>
   </div>
   <div class="project--thumbnail vertical-center">
-    <img
-      [src]="thumbnailSrc"
-      alt=""
-    />
+    <rm-image>
+      <img
+        [src]="thumbnailSrc"
+        alt=""
+      />
+    </rm-image>
   </div>
   <div class="project--buttons vertical-center">
     <div *ngFor="let button of buttonsTemplate">

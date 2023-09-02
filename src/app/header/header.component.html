@@ -1,12 +1,16 @@
 <div class="header--grid-container" *ngIf="$bio | async as bio">
   <div class="header--img">
-    <img
-      [src]="bio.cover_img"
-      alt=""
-    />
+    <rm-image>
+      <img
+        [src]="bio.cover_img"
+        alt=""
+      />
+    </rm-image>
   </div>
   <div class="header--profile-img">
-    <img [src]="bio.profile_img" alt="" />
+    <rm-image>
+      <img [src]="bio.profile_img" alt="">
+    </rm-image>
   </div>
   <div class="header--id-text">
     <span class="username">@{{ bio.username }}</span>

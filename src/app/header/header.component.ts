@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { BioService } from '../bio/bio.service';
 import { map } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { ImageComponent } from '../shared/rm-image.component';
 
 @Component({
   selector: 'rm-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ImageComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
