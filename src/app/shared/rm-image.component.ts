@@ -26,6 +26,12 @@ import { CommonModule } from '@angular/common';
       cursor: pointer;
     }
 
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .backdrop {
       width: 100%;
       height: 100%;
