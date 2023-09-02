@@ -10,14 +10,16 @@ import { CommonModule } from '@angular/common';
       <ng-content></ng-content>
     </div>
 
-    <div *ngIf="isImgZoomed" class="backdrop">
+    <div *ngIf="isImgZoomed" (click)="onImgClick()" class="backdrop">
       <div class="content">
-        <button (click)="onImgClick()">Back</button>
         <img [src]="imgSrc" alt="">
+        <button (click)="onImgClick()"><strong>x</strong></button>
       </div>
     </div>
   `,
   styles: [`
+
+
     :host, .wrapper {
       height: 100%;
       width: 100%;
@@ -31,20 +33,49 @@ import { CommonModule } from '@angular/common';
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.8);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .content {
       padding: 0;
-      width: 100%;
-      height: 100%;
+      width: 90vw;
+      height: auto;
       display: flex;
       flex-direction: column;
-      margin: 0 auto;
-      justify-content: center;
+      align-items: center;
     }
 
     .content img {
-      width: 480px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 5px solid var(--border-color);
+    }
+
+    button {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 5rem;
+      font-size: 2rem;
+      background: var(--border-color);
+      color: var(--accent-color);
+      border: 3px solid var(--border-color);
+    }
+
+    button:hover {
+      background: var(--accent-color);
+      color: var(--border-color);
+    }
+
+
+    @media (min-width: 480px) {
+      .content {
+        width: 480px;
+      }
     }
   `]
 })
