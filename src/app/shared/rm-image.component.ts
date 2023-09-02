@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
     :host, .wrapper {
       height: 100%;
       width: 100%;
+      cursor: pointer;
     }
 
     .backdrop {
@@ -51,7 +52,7 @@ import { CommonModule } from '@angular/common';
     .content img {
       width: 100%;
       box-sizing: border-box;
-      border: 5px solid var(--border-color);
+      border-radius: 5px;
     }
 
     button {
@@ -63,7 +64,7 @@ import { CommonModule } from '@angular/common';
       font-size: 2rem;
       background: var(--border-color);
       color: var(--accent-color);
-      border: 3px solid var(--border-color);
+      border: none;
     }
 
     button:hover {
