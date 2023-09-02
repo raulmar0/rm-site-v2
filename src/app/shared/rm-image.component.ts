@@ -29,7 +29,7 @@ import { CommonModule } from '@angular/common';
     .backdrop {
       width: 100%;
       height: 100%;
-      position: absolute;
+      position: fixed;
       z-index: 1;
       top: 0;
       left: 0;
