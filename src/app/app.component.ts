@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BioComponent } from './bio/bio.component';
@@ -36,11 +36,25 @@ export class AppComponent {
   private projectsService = inject(ProjectsService);
   private bioService = inject(BioService);
   private postsService = inject(PostsService);
+  @ViewChild('content') content!: ElementRef;
+  @ViewChild('container') container!: ElementRef;
+
+  showBackToTop = false;
 
   $user = this.bioService.$user;
   $projects = this.projectsService.$projects;
   $posts = this.postsService.$posts;
 
   $ready = forkJoin([this.$user, this.$projects, this.$posts]);
+
+  onContentScroll(event: any) {
+    console.log(event.target.scrollTop);
+    this.showBackToTop = event.target.scrollTop > 200 ? true : false;
+  }
+
+  onBackToTopClick() {
+    this.container.nativeElement.scrollTo({ top: 0, behavior: 'smooth' });
+    this.content.nativeElement.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
 }

@@ -1,13 +1,16 @@
-<div class="container" *ngIf="$ready | async">
+<div (scroll)="onContentScroll($event)" #container class="container" *ngIf="$ready | async">
   <div class="profile">
     <rm-top-bar/>
     <rm-header  />
     <rm-bio  />
   </div>
   <div class="vertical-divider"></div>
-  <div class="content">
+  <div #content (scroll)="onContentScroll($event)" class="content">
     <rm-nav/>
     <router-outlet></router-outlet>
     <rm-footer  ></rm-footer>
   </div>
+</div>
+<div *ngIf="showBackToTop" (click)="onBackToTopClick()" class="back-to-top">
+  <i class="fa-solid fa-chevron-up"></i>
 </div>
