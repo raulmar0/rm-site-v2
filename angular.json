@@ -93,16 +93,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rm-site-v2:build:production"
+              "buildTarget": "rm-site-v2:build:production"
             },
             "development": {
-              "browserTarget": "rm-site-v2:build:development"
+              "buildTarget": "rm-site-v2:build:development"
             },
             "fr": {
-              "browserTarget": "rm-site-v2:build:fr"
+              "buildTarget": "rm-site-v2:build:fr"
             },
             "es": {
-              "browserTarget": "rm-site-v2:build:es"
+              "buildTarget": "rm-site-v2:build:es"
             }
           },
           "defaultConfiguration": "development"
@@ -110,7 +110,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rm-site-v2:build"
+            "buildTarget": "rm-site-v2:build"
           }
         },
         "test": {
@@ -159,7 +159,7 @@
           "defaultConfiguration": "production"
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "configurations": {
             "development": {
               "browserTarget": "rm-site-v2:build:development",
@@ -173,7 +173,7 @@
           "defaultConfiguration": "development"
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "routes": [
               "/", "/blog", "/about", "projects"
