@@ -14,8 +14,7 @@
     "dev:ssr": "ng run rm-site-v2:serve-ssr",
     "serve:ssr": "node dist/rm-site-v2/server/main.js",
     "build:ssr": "ng build && ng run rm-site-v2:server",
-    "prerender": "ng run rm-site-v2:prerender",
-    "build:scully": "npm run build && npx scully --project rm-site-v2"
+    "prerender": "ng run rm-site-v2:prerender"
   },
   "private": true,
   "dependencies": {
@@ -29,9 +28,6 @@
     "@angular/platform-server": "^16.2.2",
     "@angular/router": "^16.2.2",
     "@fortawesome/fontawesome-free": "^6.4.2",
-    "@nguniversal/express-engine": "^16.0.2",
-    "@scullyio/init": "^2.1.41",
-    "@scullyio/scully-plugin-puppeteer": "^2.1.41",
     "express": "^4.15.2",
     "pocketbase": "^0.14.4",
     "rxjs": "~7.8.0",
